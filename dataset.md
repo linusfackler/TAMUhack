@@ -14,3 +14,11 @@
 
 - Cough Against Covid
   - https://github.com/WadhwaniAI/cough-against-covid-data
+
+- Common Cough
+  - https://osf.io/tmkud/wiki/home/
+
+- Common Cold
+  - https://annotator.freesound.org/fsd/explore/%252Fm%252F01b_21/
+
+
