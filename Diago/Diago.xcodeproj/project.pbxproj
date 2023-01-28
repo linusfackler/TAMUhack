@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		902005FF29858E6C0054D297 /* DiagoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902005FE29858E6C0054D297 /* DiagoApp.swift */; };
+		9020060329858E6E0054D297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020060229858E6E0054D297 /* Assets.xcassets */; };
+		9020060629858E6E0054D297 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020060529858E6E0054D297 /* Preview Assets.xcassets */; };
+		9020060829858E6E0054D297 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020060729858E6E0054D297 /* Persistence.swift */; };
+		9020060B29858E6E0054D297 /* Diago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9020060929858E6E0054D297 /* Diago.xcdatamodeld */; };
+		9020061529858E6E0054D297 /* DiagoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020061429858E6E0054D297 /* DiagoTests.swift */; };
+		9020061F29858E6E0054D297 /* DiagoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020061E29858E6E0054D297 /* DiagoUITests.swift */; };
+		9020062129858E6E0054D297 /* DiagoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020062029858E6E0054D297 /* DiagoUITestsLaunchTests.swift */; };
+		9020062E29858E870054D297 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020062D29858E870054D297 /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9020061129858E6E0054D297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 902005F329858E6C0054D297 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 902005FA29858E6C0054D297;
+			remoteInfo = Diago;
+		};
+		9020061B29858E6E0054D297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 902005F329858E6C0054D297 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 902005FA29858E6C0054D297;
+			remoteInfo = Diago;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		902005FB29858E6C0054D297 /* Diago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diago.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		902005FE29858E6C0054D297 /* DiagoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagoApp.swift; sourceTree = "<group>"; };
+		9020060229858E6E0054D297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9020060529858E6E0054D297 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9020060729858E6E0054D297 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		9020060A29858E6E0054D297 /* Diago.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diago.xcdatamodel; sourceTree = "<group>"; };
+		9020061029858E6E0054D297 /* DiagoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiagoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9020061429858E6E0054D297 /* DiagoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagoTests.swift; sourceTree = "<group>"; };
+		9020061A29858E6E0054D297 /* DiagoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiagoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9020061E29858E6E0054D297 /* DiagoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagoUITests.swift; sourceTree = "<group>"; };
+		9020062029858E6E0054D297 /* DiagoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9020062D29858E870054D297 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		902005F829858E6C0054D297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9020060D29858E6E0054D297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9020061729858E6E0054D297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		902005F229858E6C0054D297 = {
+			isa = PBXGroup;
+			children = (
+				902005FD29858E6C0054D297 /* Diago */,
+				9020061329858E6E0054D297 /* DiagoTests */,
+				9020061D29858E6E0054D297 /* DiagoUITests */,
+				902005FC29858E6C0054D297 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		902005FC29858E6C0054D297 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				902005FB29858E6C0054D297 /* Diago.app */,
+				9020061029858E6E0054D297 /* DiagoTests.xctest */,
+				9020061A29858E6E0054D297 /* DiagoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		902005FD29858E6C0054D297 /* Diago */ = {
+			isa = PBXGroup;
+			children = (
+				902005FE29858E6C0054D297 /* DiagoApp.swift */,
+				9020062D29858E870054D297 /* HomeView.swift */,
+				9020060229858E6E0054D297 /* Assets.xcassets */,
+				9020060729858E6E0054D297 /* Persistence.swift */,
+				9020060929858E6E0054D297 /* Diago.xcdatamodeld */,
+				9020060429858E6E0054D297 /* Preview Content */,
+			);
+			path = Diago;
+			sourceTree = "<group>";
+		};
+		9020060429858E6E0054D297 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9020060529858E6E0054D297 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9020061329858E6E0054D297 /* DiagoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9020061429858E6E0054D297 /* DiagoTests.swift */,
+			);
+			path = DiagoTests;
+			sourceTree = "<group>";
+		};
+		9020061D29858E6E0054D297 /* DiagoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9020061E29858E6E0054D297 /* DiagoUITests.swift */,
+				9020062029858E6E0054D297 /* DiagoUITestsLaunchTests.swift */,
+			);
+			path = DiagoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		902005FA29858E6C0054D297 /* Diago */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9020062429858E6E0054D297 /* Build configuration list for PBXNativeTarget "Diago" */;
+			buildPhases = (
+				902005F729858E6C0054D297 /* Sources */,
+				902005F829858E6C0054D297 /* Frameworks */,
+				902005F929858E6C0054D297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Diago;
+			productName = Diago;
+			productReference = 902005FB29858E6C0054D297 /* Diago.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9020060F29858E6E0054D297 /* DiagoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9020062729858E6E0054D297 /* Build configuration list for PBXNativeTarget "DiagoTests" */;
+			buildPhases = (
+				9020060C29858E6E0054D297 /* Sources */,
+				9020060D29858E6E0054D297 /* Frameworks */,
+				9020060E29858E6E0054D297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9020061229858E6E0054D297 /* PBXTargetDependency */,
+			);
+			name = DiagoTests;
+			productName = DiagoTests;
+			productReference = 9020061029858E6E0054D297 /* DiagoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9020061929858E6E0054D297 /* DiagoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9020062A29858E6E0054D297 /* Build configuration list for PBXNativeTarget "DiagoUITests" */;
+			buildPhases = (
+				9020061629858E6E0054D297 /* Sources */,
+				9020061729858E6E0054D297 /* Frameworks */,
+				9020061829858E6E0054D297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9020061C29858E6E0054D297 /* PBXTargetDependency */,
+			);
+			name = DiagoUITests;
+			productName = DiagoUITests;
+			productReference = 9020061A29858E6E0054D297 /* DiagoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		902005F329858E6C0054D297 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					902005FA29858E6C0054D297 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					9020060F29858E6E0054D297 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 902005FA29858E6C0054D297;
+					};
+					9020061929858E6E0054D297 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 902005FA29858E6C0054D297;
+					};
+				};
+			};
+			buildConfigurationList = 902005F629858E6C0054D297 /* Build configuration list for PBXProject "Diago" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 902005F229858E6C0054D297;
+			productRefGroup = 902005FC29858E6C0054D297 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				902005FA29858E6C0054D297 /* Diago */,
+				9020060F29858E6E0054D297 /* DiagoTests */,
+				9020061929858E6E0054D297 /* DiagoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		902005F929858E6C0054D297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9020060629858E6E0054D297 /* Preview Assets.xcassets in Resources */,
+				9020060329858E6E0054D297 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9020060E29858E6E0054D297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9020061829858E6E0054D297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		902005F729858E6C0054D297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9020060829858E6E0054D297 /* Persistence.swift in Sources */,
+				9020060B29858E6E0054D297 /* Diago.xcdatamodeld in Sources */,
+				9020062E29858E870054D297 /* HomeView.swift in Sources */,
+				902005FF29858E6C0054D297 /* DiagoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9020060C29858E6E0054D297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9020061529858E6E0054D297 /* DiagoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9020061629858E6E0054D297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9020061F29858E6E0054D297 /* DiagoUITests.swift in Sources */,
+				9020062129858E6E0054D297 /* DiagoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9020061229858E6E0054D297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 902005FA29858E6C0054D297 /* Diago */;
+			targetProxy = 9020061129858E6E0054D297 /* PBXContainerItemProxy */;
+		};
+		9020061C29858E6E0054D297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 902005FA29858E6C0054D297 /* Diago */;
+			targetProxy = 9020061B29858E6E0054D297 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9020062229858E6E0054D297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9020062329858E6E0054D297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9020062529858E6E0054D297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Diago/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cesarg.Diago;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9020062629858E6E0054D297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Diago/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cesarg.Diago;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9020062829858E6E0054D297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cesarg.DiagoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diago.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diago";
+			};
+			name = Debug;
+		};
+		9020062929858E6E0054D297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cesarg.DiagoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diago.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diago";
+			};
+			name = Release;
+		};
+		9020062B29858E6E0054D297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cesarg.DiagoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Diago;
+			};
+			name = Debug;
+		};
+		9020062C29858E6E0054D297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cesarg.DiagoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Diago;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		902005F629858E6C0054D297 /* Build configuration list for PBXProject "Diago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9020062229858E6E0054D297 /* Debug */,
+				9020062329858E6E0054D297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9020062429858E6E0054D297 /* Build configuration list for PBXNativeTarget "Diago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9020062529858E6E0054D297 /* Debug */,
+				9020062629858E6E0054D297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9020062729858E6E0054D297 /* Build configuration list for PBXNativeTarget "DiagoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9020062829858E6E0054D297 /* Debug */,
+				9020062929858E6E0054D297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9020062A29858E6E0054D297 /* Build configuration list for PBXNativeTarget "DiagoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9020062B29858E6E0054D297 /* Debug */,
+				9020062C29858E6E0054D297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9020060929858E6E0054D297 /* Diago.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9020060A29858E6E0054D297 /* Diago.xcdatamodel */,
+			);
+			currentVersion = 9020060A29858E6E0054D297 /* Diago.xcdatamodel */;
+			path = Diago.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 902005F329858E6C0054D297 /* Project object */;
+}
