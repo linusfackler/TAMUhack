@@ -21,4 +21,7 @@
 - Common Cold
   - https://annotator.freesound.org/fsd/explore/%252Fm%252F01b_21/
 
+- COIVD Cambridge Model
+  - https://github.com/cam-mobsys/covid19-sounds-neurips
+
 
