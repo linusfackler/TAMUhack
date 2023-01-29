@@ -1,1 +1,4 @@
 .plist
+
+node_modules
+.env
