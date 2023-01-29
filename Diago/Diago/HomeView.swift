@@ -9,7 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+//            PromptView(image: "VitalTest", titleText: "Vital Signs Test", subText: "Sit tight and breathe normally for 15 seconds.")
+//                .padding(.bottom, Size.Spacing.Vertical.textSpace)
+            VitalsTestView()
+        }
     }
 }
 

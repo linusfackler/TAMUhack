@@ -16,6 +16,16 @@
 		9020061F29858E6E0054D297 /* DiagoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020061E29858E6E0054D297 /* DiagoUITests.swift */; };
 		9020062129858E6E0054D297 /* DiagoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020062029858E6E0054D297 /* DiagoUITestsLaunchTests.swift */; };
 		9020062E29858E870054D297 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020062D29858E870054D297 /* HomeView.swift */; };
+		9020063229859A5E0054D297 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020063129859A5E0054D297 /* ButtonViews.swift */; };
+		9020063529859C360054D297 /* ElementConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020063429859C360054D297 /* ElementConstraints.swift */; };
+		9020063729859EF60054D297 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9020063629859EF60054D297 /* GoogleService-Info.plist */; };
+		9020063A29859F9E0054D297 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9020063929859F9E0054D297 /* FirebaseFirestore */; };
+		9020063C29859F9E0054D297 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9020063B29859F9E0054D297 /* FirebaseFirestoreCombine-Community */; };
+		9020063E29859F9E0054D297 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9020063D29859F9E0054D297 /* FirebaseFirestoreSwift */; };
+		902006402985A4CA0054D297 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020063F2985A4CA0054D297 /* Color.swift */; };
+		902006442985B33D0054D297 /* Gilroy-Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 902006432985B33D0054D297 /* Gilroy-Fonts */; };
+		902006462985BB110054D297 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006452985BB110054D297 /* PromptView.swift */; };
+		902006482985C4790054D297 /* TestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006472985C4790054D297 /* TestViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +58,14 @@
 		9020061E29858E6E0054D297 /* DiagoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagoUITests.swift; sourceTree = "<group>"; };
 		9020062029858E6E0054D297 /* DiagoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9020062D29858E870054D297 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9020063129859A5E0054D297 /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
+		9020063429859C360054D297 /* ElementConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementConstraints.swift; sourceTree = "<group>"; };
+		9020063629859EF60054D297 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9020063F2985A4CA0054D297 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		902006412985ADB70054D297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		902006432985B33D0054D297 /* Gilroy-Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Gilroy-Fonts"; path = "../../../../../../Gilroy-Fonts"; sourceTree = "<group>"; };
+		902006452985BB110054D297 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
+		902006472985C4790054D297 /* TestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9020063A29859F9E0054D297 /* FirebaseFirestore in Frameworks */,
+				9020063C29859F9E0054D297 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				9020063E29859F9E0054D297 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +119,15 @@
 		902005FD29858E6C0054D297 /* Diago */ = {
 			isa = PBXGroup;
 			children = (
+				902006412985ADB70054D297 /* Info.plist */,
+				9020064B2985FB7B0054D297 /* DiagoBackend */,
+				9020062F29859A260054D297 /* DiagoUI */,
 				902005FE29858E6C0054D297 /* DiagoApp.swift */,
 				9020062D29858E870054D297 /* HomeView.swift */,
 				9020060229858E6E0054D297 /* Assets.xcassets */,
 				9020060729858E6E0054D297 /* Persistence.swift */,
 				9020060929858E6E0054D297 /* Diago.xcdatamodeld */,
+				9020063629859EF60054D297 /* GoogleService-Info.plist */,
 				9020060429858E6E0054D297 /* Preview Content */,
 			);
 			path = Diago;
@@ -133,6 +158,50 @@
 			path = DiagoUITests;
 			sourceTree = "<group>";
 		};
+		9020062F29859A260054D297 /* DiagoUI */ = {
+			isa = PBXGroup;
+			children = (
+				902006422985B32B0054D297 /* Diago-Fonts */,
+				9020063329859C120054D297 /* Reusable Components */,
+				9020063029859A3F0054D297 /* Reusable Elements */,
+			);
+			path = DiagoUI;
+			sourceTree = "<group>";
+		};
+		9020063029859A3F0054D297 /* Reusable Elements */ = {
+			isa = PBXGroup;
+			children = (
+				9020063129859A5E0054D297 /* ButtonViews.swift */,
+				902006452985BB110054D297 /* PromptView.swift */,
+				902006472985C4790054D297 /* TestViews.swift */,
+			);
+			path = "Reusable Elements";
+			sourceTree = "<group>";
+		};
+		9020063329859C120054D297 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				9020063429859C360054D297 /* ElementConstraints.swift */,
+				9020063F2985A4CA0054D297 /* Color.swift */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		902006422985B32B0054D297 /* Diago-Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				902006432985B33D0054D297 /* Gilroy-Fonts */,
+			);
+			path = "Diago-Fonts";
+			sourceTree = "<group>";
+		};
+		9020064B2985FB7B0054D297 /* DiagoBackend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DiagoBackend;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +218,11 @@
 			dependencies = (
 			);
 			name = Diago;
+			packageProductDependencies = (
+				9020063929859F9E0054D297 /* FirebaseFirestore */,
+				9020063B29859F9E0054D297 /* FirebaseFirestoreCombine-Community */,
+				9020063D29859F9E0054D297 /* FirebaseFirestoreSwift */,
+			);
 			productName = Diago;
 			productReference = 902005FB29858E6C0054D297 /* Diago.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 902005F229858E6C0054D297;
+			packageReferences = (
+				9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 902005FC29858E6C0054D297 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,7 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9020060629858E6E0054D297 /* Preview Assets.xcassets in Resources */,
+				902006442985B33D0054D297 /* Gilroy-Fonts in Resources */,
 				9020060329858E6E0054D297 /* Assets.xcassets in Resources */,
+				9020063729859EF60054D297 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +344,13 @@
 			files = (
 				9020060829858E6E0054D297 /* Persistence.swift in Sources */,
 				9020060B29858E6E0054D297 /* Diago.xcdatamodeld in Sources */,
+				902006482985C4790054D297 /* TestViews.swift in Sources */,
+				902006402985A4CA0054D297 /* Color.swift in Sources */,
+				9020063229859A5E0054D297 /* ButtonViews.swift in Sources */,
 				9020062E29858E870054D297 /* HomeView.swift in Sources */,
 				902005FF29858E6C0054D297 /* DiagoApp.swift in Sources */,
+				9020063529859C360054D297 /* ElementConstraints.swift in Sources */,
+				902006462985BB110054D297 /* PromptView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,8 +509,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Diago/Preview Content\"";
+				DEVELOPMENT_TEAM = 2N9BBV4R36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Diago/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,6 +541,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Diago/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Diago/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -585,6 +672,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9020063929859F9E0054D297 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9020063B29859F9E0054D297 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		9020063D29859F9E0054D297 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9020060929858E6E0054D297 /* Diago.xcdatamodeld */ = {
