@@ -1,6 +1,4 @@
 {
-  "name": "Jhon Doe",
-  "email": "jhondoe@gmail.com",
-  "disease": "Parkinsons",
-  "password": "123456"
+  "id": "000000000000",
+  "result": "positive"
 }
