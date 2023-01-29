@@ -18,9 +18,10 @@ struct CoughTestView: View {
                 Color.ui.primary
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: UIScreen.main.bounds.width * 0.05) {
-                    BackNavButton()
-                    TitleTextsView(focusText: "Record your cough", trailText: "Respiration Test")
-                    Spacer()
+                    VStack(spacing: UIScreen.main.bounds.width * 0.05) {
+                        BackNavButton()
+                        TitleTextsView(focusText: "Record your cough", trailText: "Respiration Test")
+                    }.padding()
                     Spacer()
                     MicrophoneView(recording: $recording, audioRecorder: audioRecorder)
                 }
@@ -39,8 +40,10 @@ struct MicrophoneView: View {
                 .foregroundColor(.white)
                 .cornerRadius(CornerRadius.Card.radius)
             VStack {
-                Text("Tap to start recording")
-                    .font(Font.custom("Gilroy-Medium", size: Size.Font.Button.titleSize/1.3))
+                if !recording {
+                    Text("Tap to start recording")
+                        .font(Font.custom("Gilroy-Medium", size: Size.Font.Button.titleSize/1.5))
+                }
                 
                 if recording {
                     Image("MicButtonOn")
