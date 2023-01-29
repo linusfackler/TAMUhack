@@ -24,11 +24,12 @@
 		9020063E29859F9E0054D297 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9020063D29859F9E0054D297 /* FirebaseFirestoreSwift */; };
 		902006402985A4CA0054D297 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020063F2985A4CA0054D297 /* Color.swift */; };
 		902006442985B33D0054D297 /* Gilroy-Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 902006432985B33D0054D297 /* Gilroy-Fonts */; };
-		902006462985BB110054D297 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006452985BB110054D297 /* PromptView.swift */; };
+		902006462985BB110054D297 /* PromptViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006452985BB110054D297 /* PromptViews.swift */; };
 		902006482985C4790054D297 /* VitalsTestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006472985C4790054D297 /* VitalsTestViews.swift */; };
 		9020064D29860AAE0054D297 /* CoughTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020064C29860AAE0054D297 /* CoughTestView.swift */; };
 		9020065029861BC90054D297 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9020064F29861BC90054D297 /* DSWaveformImage */; };
 		9020065329861FBF0054D297 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020065229861FBF0054D297 /* AudioModel.swift */; };
+		90B36B0829866DA00049942E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 90B36B0729866DA00049942E /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,7 @@
 		9020063F2985A4CA0054D297 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		902006412985ADB70054D297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		902006432985B33D0054D297 /* Gilroy-Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Gilroy-Fonts"; path = "../../../../../../Gilroy-Fonts"; sourceTree = "<group>"; };
-		902006452985BB110054D297 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
+		902006452985BB110054D297 /* PromptViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptViews.swift; sourceTree = "<group>"; };
 		902006472985C4790054D297 /* VitalsTestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsTestViews.swift; sourceTree = "<group>"; };
 		9020064C29860AAE0054D297 /* CoughTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughTestView.swift; sourceTree = "<group>"; };
 		9020065229861FBF0054D297 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 				9020065029861BC90054D297 /* DSWaveformImage in Frameworks */,
 				9020063A29859F9E0054D297 /* FirebaseFirestore in Frameworks */,
 				9020063C29859F9E0054D297 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				90B36B0829866DA00049942E /* FirebaseStorage in Frameworks */,
 				9020063E29859F9E0054D297 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +111,7 @@
 				9020061329858E6E0054D297 /* DiagoTests */,
 				9020061D29858E6E0054D297 /* DiagoUITests */,
 				902005FC29858E6C0054D297 /* Products */,
+				90B36B0629866DA00049942E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				9020063129859A5E0054D297 /* ButtonViews.swift */,
-				902006452985BB110054D297 /* PromptView.swift */,
+				902006452985BB110054D297 /* PromptViews.swift */,
 				902006472985C4790054D297 /* VitalsTestViews.swift */,
 				9020065129861FA90054D297 /* CoughTest */,
 			);
@@ -218,6 +221,13 @@
 			path = CoughTest;
 			sourceTree = "<group>";
 		};
+		90B36B0629866DA00049942E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +249,7 @@
 				9020063B29859F9E0054D297 /* FirebaseFirestoreCombine-Community */,
 				9020063D29859F9E0054D297 /* FirebaseFirestoreSwift */,
 				9020064F29861BC90054D297 /* DSWaveformImage */,
+				90B36B0729866DA00049942E /* FirebaseStorage */,
 			);
 			productName = Diago;
 			productReference = 902005FB29858E6C0054D297 /* Diago.app */;
@@ -370,7 +381,7 @@
 				9020062E29858E870054D297 /* HomeView.swift in Sources */,
 				902005FF29858E6C0054D297 /* DiagoApp.swift in Sources */,
 				9020063529859C360054D297 /* ElementConstraints.swift in Sources */,
-				902006462985BB110054D297 /* PromptView.swift in Sources */,
+				902006462985BB110054D297 /* PromptViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +743,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9020064E29861BC80054D297 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
 			productName = DSWaveformImage;
+		};
+		90B36B0729866DA00049942E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

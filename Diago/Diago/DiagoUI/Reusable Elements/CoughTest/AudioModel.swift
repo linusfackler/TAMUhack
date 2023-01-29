@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 import AVFoundation
+import FirebaseStorage
 
 class AudioRecorder: NSObject, ObservableObject {
     
@@ -40,7 +41,7 @@ class AudioRecorder: NSObject, ObservableObject {
         }
         
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let audioFilename = documentPath.appendingPathComponent("0000000001")
+        let audioFilename = documentPath.appendingPathComponent("0000000001.m4a")
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -69,14 +70,33 @@ class AudioRecorder: NSObject, ObservableObject {
     func fetchRecording() {
         recordings.removeAll()
         
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        let clipsRef = storageRef.child("clips/clip1.m4a")
+        
         let fileManager = FileManager.default
+        
         let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let directoryContents = try! fileManager.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
         for audio in directoryContents {
             let recording = Recording(fileURL: audio, createdAt: getFileDate(for: audio))
+            do {
+                let localFile = try Data(contentsOf: audio as URL)
+                let uploadTask = clipsRef.putData(localFile, metadata: nil) { (metadata, error) in
+                    guard let metadata = metadata else {
+                        return
+                    }
+                    let size = metadata.size
+                }
+            } catch {
+                print("error occured")
+            }
+            
             recordings.append(recording)
         }
         
+        print(recordings)
         recordings.sort(by: { $0.createdAt.compare($1.createdAt) == .orderedAscending})
         
         objectWillChange.send(self)

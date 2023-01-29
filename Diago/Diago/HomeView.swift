@@ -12,7 +12,7 @@ struct HomeView: View {
         VStack {
 //            VitalsPromptView(image: "VitalTest", titleText: "Vital Signs Test", subText: "Sit tight and breathe normally for 15 seconds.")
 //                .padding(.bottom, Size.Spacing.Vertical.textSpace)
-            CoughTestView()
+            CoughPromptView(image: "VocalTest", titleText: "Respiratory Test", subText: "Record yourself coughing for a proper diagnosis.")
         }
     }
 }
