@@ -1,5 +1,6 @@
 import numpy as np
-import librosa.display, os
+import librosa.display
+import os
 import matplotlib.pyplot as plt
 import sys
 from pydub import AudioSegment
@@ -11,6 +12,12 @@ print('first param:' + sys.argv[2])
 
 url = sys.argv[1]
 output = sys.argv[2]
+
+wavePath = "backend\\public\\videos\\cough.wav"
+
+sound = AudioSegment.from_file(url,  format='m4a')
+sound.export(wavePath, format="wav")
+
 
 def create_spectrogram(audio_file, image_file):
     fig = plt.figure()
@@ -25,4 +32,5 @@ def create_spectrogram(audio_file, image_file):
     fig.savefig(image_file)
     plt.close(fig)
 
-create_spectrogram(url, output)
+
+create_spectrogram(wavePath, output)
