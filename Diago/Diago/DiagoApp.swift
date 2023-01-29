@@ -13,6 +13,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
       FirebaseApp.configure()
 
+      FitBitAPI.shared.loginFitBit()
+//      print(result)
+      
       return true
   }
 }

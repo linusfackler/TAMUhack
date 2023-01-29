@@ -2,17 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UILaunchImageFile</key>
-	<string>LuraLogo</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>To help diagnose your cough</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Gilroy-Fonts/Gilroy-SemiBold.ttf</string>
 		<string>Gilroy-Fonts/Gilroy-Medium.ttf</string>
 		<string>Gilroy-Fonts/Gilroy-Regular.ttf</string>
 	</array>
+	<key>UILaunchImageFile</key>
+	<string>LuraLogo</string>
 </dict>
 </plist>
