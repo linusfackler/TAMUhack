@@ -30,6 +30,8 @@
 		9020065029861BC90054D297 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9020064F29861BC90054D297 /* DSWaveformImage */; };
 		9020065329861FBF0054D297 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020065229861FBF0054D297 /* AudioModel.swift */; };
 		90B36B0829866DA00049942E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 90B36B0729866DA00049942E /* FirebaseStorage */; };
+		90B36B0C2986A4020049942E /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B36B0B2986A4020049942E /* DiagnosisView.swift */; };
+		90B36B0E2986A5D90049942E /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B36B0D2986A5D90049942E /* URLRequests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		902006472985C4790054D297 /* VitalsTestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsTestViews.swift; sourceTree = "<group>"; };
 		9020064C29860AAE0054D297 /* CoughTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughTestView.swift; sourceTree = "<group>"; };
 		9020065229861FBF0054D297 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		90B36B0B2986A4020049942E /* DiagnosisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
+		90B36B0D2986A5D90049942E /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,7 @@
 		9020064B2985FB7B0054D297 /* DiagoBackend */ = {
 			isa = PBXGroup;
 			children = (
+				90B36B0D2986A5D90049942E /* URLRequests.swift */,
 			);
 			path = DiagoBackend;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			children = (
 				9020064C29860AAE0054D297 /* CoughTestView.swift */,
 				9020065229861FBF0054D297 /* AudioModel.swift */,
+				90B36B0B2986A4020049942E /* DiagnosisView.swift */,
 			);
 			path = CoughTest;
 			sourceTree = "<group>";
@@ -374,9 +380,11 @@
 				9020065329861FBF0054D297 /* AudioModel.swift in Sources */,
 				9020060829858E6E0054D297 /* Persistence.swift in Sources */,
 				9020064D29860AAE0054D297 /* CoughTestView.swift in Sources */,
+				90B36B0E2986A5D90049942E /* URLRequests.swift in Sources */,
 				9020060B29858E6E0054D297 /* Diago.xcdatamodeld in Sources */,
 				902006482985C4790054D297 /* VitalsTestViews.swift in Sources */,
 				902006402985A4CA0054D297 /* Color.swift in Sources */,
+				90B36B0C2986A4020049942E /* DiagnosisView.swift in Sources */,
 				9020063229859A5E0054D297 /* ButtonViews.swift in Sources */,
 				9020062E29858E870054D297 /* HomeView.swift in Sources */,
 				902005FF29858E6C0054D297 /* DiagoApp.swift in Sources */,

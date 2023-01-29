@@ -30,7 +30,7 @@ struct CoughTestView: View {
                     Spacer()
                     MicrophoneView(recording: $recording, audioRecorder: audioRecorder)
                 }
-            }.edgesIgnoringSafeArea(.bottom)
+            }.edgesIgnoringSafeArea(.all)
         }.navigationBarHidden(true)
     }
 }
@@ -66,6 +66,7 @@ struct MicrophoneView: View {
                                 audioRecorder.startRecording()
                             } else {
                                 audioRecorder.stopRecording()
+                                sendQuery()
                             }
                             withAnimation {
                                 recording.toggle()
