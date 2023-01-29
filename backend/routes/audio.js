@@ -24,10 +24,6 @@ const storage = getStorage(app);
 router.get("/:filename", function (req, res, next) {
   let filename = req.params.filename;
 
-  if (String(filename).includes(".pdf") === false) {
-    filename = filename + ".pdf";
-  }
-
   var videoRef = ref(storage, "/clips/" + filename);
   getDownloadURL(videoRef)
     .then((url) => {
@@ -53,7 +49,7 @@ router.get("/:filename", function (req, res, next) {
 
   var dataToSend;
   // spawn new child process to call the python script
-  const python = spawn("python", ["script.py", "backend/videos/" +filename, "backend/pics/0.png"]);
+  const python = spawn("python", ["script.py", "./public/videos/" +filename, "./public/pics/0.png"]);
   // collect data from script
   python.stdout.on("data", function (data) {
     console.log("Pipe data from python script ...");
