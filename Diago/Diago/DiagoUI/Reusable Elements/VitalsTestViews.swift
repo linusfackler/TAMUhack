@@ -11,50 +11,75 @@ struct VitalsTestView: View {
     @State var complete: Bool = false
     @State var countdown = 15
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         NavigationView {
             ZStack {
                 Color.ui.primary
                 VStack(spacing: UIScreen.main.bounds.width * 0.05) {
                     HStack {
-                        Circle()
-                            .foregroundColor(Color.ui.primaryWeak)
-                            .frame(width: (UIScreen.main.bounds.width * 0.123), height: (UIScreen.main.bounds.width * 0.123))
-                        Spacer()
-                    }
-                    HStack {
-                        VStack(alignment: .leading, spacing: Size.Spacing.Vertical.textSpace) {
-                            Text("Hold Still...")
-                                .font(Font.custom("Gilroy-Semibold", size: Size.Font.Button.titleSize))
-                                .foregroundColor(.white)
-                            Text("Checking Vitals")
-                                .font(Font.custom("Gilroy-Semibold", size: Size.Font.Button.titleSize))
-                                .foregroundColor(.white.opacity(0.6))
+                        ZStack {
+                            Circle()
+                                .foregroundColor(Color.ui.primaryWeak)
+                                .frame(width: (UIScreen.main.bounds.width * 0.123), height: (UIScreen.main.bounds.width * 0.123))
                         }
                         Spacer()
                     }
-                    ZStack {
-                        ParticlesView()
-                        Text(complete ? "All done" : "\(countdown)")
-                            .font(Font.custom("Gilroy-Semibold", size: complete ? Size.Font.Button.titleSize*1.3 : Size.Font.Button.titleSize*2))
-                            .foregroundColor(.white)
-                            .onReceive(timer) {_ in
-                                if countdown > 0 && !complete {
-                                    countdown -= 1
-                                } else {
-                                    withAnimation {
-                                        complete = true
-                                    }
-                                }
-                            }
-                    }
+                    TitleTextsView(focusText: "Hold stil...", trailText: "Checking Vitals")
+                    
+                    Spacer()
+                    
+                    CountdownView(countdown: $countdown, complete: $complete)
+                    
+                    Spacer()
+                    
+                    TitleTextsView(focusText: "Smartwatch", trailText: "Fitbit Pro 3")
+                    
+                    ButtonView(type: complete ? .secondaryStrong : .primaryWeak, text: complete ? "Continue" : "Restart")
                 }
                 .padding(Size.Spacing.Vertical.buttonSpace*1.7)
+            }.edgesIgnoringSafeArea(.all)
+        }.navigationBarHidden(true)
+    }
+}
+
+struct TitleTextsView: View {
+    @State var focusText: String
+    @State var trailText: String
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: Size.Spacing.Vertical.textSpace) {
+                Text(focusText)
+                    .font(Font.custom("Gilroy-Semibold", size: Size.Font.Button.titleSize))
+                    .foregroundColor(.white)
+                Text(trailText)
+                    .font(Font.custom("Gilroy-Semibold", size: Size.Font.Button.titleSize))
+                    .foregroundColor(.white.opacity(0.6))
             }
-            .edgesIgnoringSafeArea(.all)
-            .onAppear {
-            }
+            Spacer()
+        }
+    }
+}
+
+struct CountdownView: View {
+    @Binding var countdown: Int
+    @Binding var complete: Bool
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    var body: some View {
+        ZStack {
+            ParticlesView()
+            Text(complete ? "All done" : "\(countdown)")
+                .font(Font.custom("Gilroy-Semibold", size: complete ? Size.Font.Button.titleSize*1.3 : Size.Font.Button.titleSize*2))
+                .foregroundColor(.white)
+                .onReceive(timer) {_ in
+                    if countdown > 0 && !complete {
+                        countdown -= 1
+                    } else {
+                        withAnimation {
+                            complete = true
+                        }
+                    }
+                }
         }
     }
 }

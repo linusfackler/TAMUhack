@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PromptView: View {
+struct VitalsPromptView: View {
     @State var image: String
     @State var titleText: String
     @State var subText: String
@@ -29,10 +29,12 @@ struct PromptView: View {
                 Spacer()
                 
                 VStack(spacing: Size.Spacing.Vertical.buttonSpace) {
-                    ButtonView(type: .primaryStrong, text: "Start")
-                        .onTapGesture {
-                            print("Test View")
-                        }
+                    NavigationLink {
+                        VitalsTestView()
+                    } label: {
+                        ButtonView(type: .primaryStrong, text: "Start")
+                    }
+
                     ButtonView(type: .secondaryWeak, text: "Cancel")
                         .onTapGesture {
                             print("Back to home screen")

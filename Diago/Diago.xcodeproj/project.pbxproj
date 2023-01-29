@@ -25,7 +25,10 @@
 		902006402985A4CA0054D297 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020063F2985A4CA0054D297 /* Color.swift */; };
 		902006442985B33D0054D297 /* Gilroy-Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 902006432985B33D0054D297 /* Gilroy-Fonts */; };
 		902006462985BB110054D297 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006452985BB110054D297 /* PromptView.swift */; };
-		902006482985C4790054D297 /* TestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006472985C4790054D297 /* TestViews.swift */; };
+		902006482985C4790054D297 /* VitalsTestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006472985C4790054D297 /* VitalsTestViews.swift */; };
+		9020064D29860AAE0054D297 /* CoughTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020064C29860AAE0054D297 /* CoughTestView.swift */; };
+		9020065029861BC90054D297 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9020064F29861BC90054D297 /* DSWaveformImage */; };
+		9020065329861FBF0054D297 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020065229861FBF0054D297 /* AudioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +68,9 @@
 		902006412985ADB70054D297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		902006432985B33D0054D297 /* Gilroy-Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Gilroy-Fonts"; path = "../../../../../../Gilroy-Fonts"; sourceTree = "<group>"; };
 		902006452985BB110054D297 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
-		902006472985C4790054D297 /* TestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViews.swift; sourceTree = "<group>"; };
+		902006472985C4790054D297 /* VitalsTestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsTestViews.swift; sourceTree = "<group>"; };
+		9020064C29860AAE0054D297 /* CoughTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughTestView.swift; sourceTree = "<group>"; };
+		9020065229861FBF0054D297 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9020065029861BC90054D297 /* DSWaveformImage in Frameworks */,
 				9020063A29859F9E0054D297 /* FirebaseFirestore in Frameworks */,
 				9020063C29859F9E0054D297 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				9020063E29859F9E0054D297 /* FirebaseFirestoreSwift in Frameworks */,
@@ -173,7 +179,8 @@
 			children = (
 				9020063129859A5E0054D297 /* ButtonViews.swift */,
 				902006452985BB110054D297 /* PromptView.swift */,
-				902006472985C4790054D297 /* TestViews.swift */,
+				902006472985C4790054D297 /* VitalsTestViews.swift */,
+				9020065129861FA90054D297 /* CoughTest */,
 			);
 			path = "Reusable Elements";
 			sourceTree = "<group>";
@@ -202,6 +209,15 @@
 			path = DiagoBackend;
 			sourceTree = "<group>";
 		};
+		9020065129861FA90054D297 /* CoughTest */ = {
+			isa = PBXGroup;
+			children = (
+				9020064C29860AAE0054D297 /* CoughTestView.swift */,
+				9020065229861FBF0054D297 /* AudioModel.swift */,
+			);
+			path = CoughTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +238,7 @@
 				9020063929859F9E0054D297 /* FirebaseFirestore */,
 				9020063B29859F9E0054D297 /* FirebaseFirestoreCombine-Community */,
 				9020063D29859F9E0054D297 /* FirebaseFirestoreSwift */,
+				9020064F29861BC90054D297 /* DSWaveformImage */,
 			);
 			productName = Diago;
 			productReference = 902005FB29858E6C0054D297 /* Diago.app */;
@@ -297,6 +314,7 @@
 			mainGroup = 902005F229858E6C0054D297;
 			packageReferences = (
 				9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9020064E29861BC80054D297 /* XCRemoteSwiftPackageReference "DSWaveformImage" */,
 			);
 			productRefGroup = 902005FC29858E6C0054D297 /* Products */;
 			projectDirPath = "";
@@ -342,9 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9020065329861FBF0054D297 /* AudioModel.swift in Sources */,
 				9020060829858E6E0054D297 /* Persistence.swift in Sources */,
+				9020064D29860AAE0054D297 /* CoughTestView.swift in Sources */,
 				9020060B29858E6E0054D297 /* Diago.xcdatamodeld in Sources */,
-				902006482985C4790054D297 /* TestViews.swift in Sources */,
+				902006482985C4790054D297 /* VitalsTestViews.swift in Sources */,
 				902006402985A4CA0054D297 /* Color.swift in Sources */,
 				9020063229859A5E0054D297 /* ButtonViews.swift in Sources */,
 				9020062E29858E870054D297 /* HomeView.swift in Sources */,
@@ -682,6 +702,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9020064E29861BC80054D297 /* XCRemoteSwiftPackageReference "DSWaveformImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmrschmidt/DSWaveformImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -699,6 +727,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9020063829859F9E0054D297 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		9020064F29861BC90054D297 /* DSWaveformImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9020064E29861BC80054D297 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			productName = DSWaveformImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -33,4 +33,7 @@ struct CornerRadius {
     struct Button {
         static let radius: CGFloat = (UIScreen.main.bounds.width * 0.026)
     }
+    struct Card {
+        static let radius: CGFloat = (UIScreen.main.bounds.width * 0.0933)
+    }
 }
