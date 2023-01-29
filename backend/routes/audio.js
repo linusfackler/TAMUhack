@@ -5,9 +5,11 @@ var spawn = require("child_process").spawn;
 
 const axios = require("axios");
 const fs = require("fs");
+
 // var download = require("downloadjs");
 const { initializeApp } = require("firebase/app");
 const { getStorage, ref, getDownloadURL } = require("firebase/storage");
+const path = require("path");
 
 const firebaseConfig = {
   apiKey: "AIzaSyB3nPAemDSz-_b1GGXXzXCDg6GgdIhMITI",
@@ -49,7 +51,7 @@ router.get("/:filename", function (req, res, next) {
 
   var dataToSend;
   // spawn new child process to call the python script
-  const python = spawn("python", ["script.py", "./public/videos/" +filename, "./public/pics/0.png"]);
+  const python = spawn("python", ["script.py", "./public/videos/" +filename, "./public/pics/" + path.parse(filename).name]);
   // collect data from script
   python.stdout.on("data", function (data) {
     console.log("Pipe data from python script ...");
@@ -60,6 +62,10 @@ router.get("/:filename", function (req, res, next) {
   python.on("close", (code) => {
     console.log(`child process close all stdio with code ${code}`);
   });
+
+  const result = require("../results.json");
+
+    res.send(result);
 });
 
 module.exports = router;

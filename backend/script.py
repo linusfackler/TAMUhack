@@ -33,6 +33,8 @@
 #     print("hi")
 #     plt.close(fig)
 
+import json
+import boto3
 import numpy as np
 import librosa.display
 import os
@@ -42,12 +44,7 @@ from pydub import AudioSegment
 
 
 url = sys.argv[1]
-output = sys.argv[2]
-
-wavePath = "./public/videos/cough.wav"
-
-
-print("hello")
+wavePath = "./public/videos/output.wav"
 
 
 def create_spectrogram(audio_file, image_file):
@@ -75,10 +72,49 @@ def create_pngs_from_wavs(input_path, output_path):
         output_file = os.path.join(output_path, file.replace('.wav', '.png'))
 
 
-print(url)
 sound = AudioSegment.from_file(url,  format='m4a')
-print('hi')
 sound.export(wavePath, format="wav")
 
-
+output = sys.argv[2]
 create_spectrogram(wavePath, output)
+print(output)
+
+
+def query_endpoint(img):
+    endpoint_name = 'jumpstart-ftc-tf-ic-resnet-50-classification-1-1'
+    client = boto3.client('runtime.sagemaker', region_name='us-east-2', aws_access_key_id="AKIAV4M7YLOKNNU3NKOT",
+                          aws_secret_access_key="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")
+    response = client.invoke_endpoint(
+        EndpointName=endpoint_name, ContentType='application/x-image', Body=img, Accept='application/json;verbose')
+    return response
+
+
+def parse_prediction(query_response):
+    model_predictions = json.loads(query_response['Body'].read())
+    predicted_label = model_predictions['predicted_label']
+    labels = model_predictions['labels']
+    probabilities = model_predictions['probabilities']
+    return predicted_label, probabilities, labels
+
+
+images = {}
+with open(output+".png", 'rb') as file:
+    images["a"] = file.read()
+
+final_result = ""
+
+for filename, img in images.items():
+    print("s")
+    query_response = query_endpoint(img)
+    print("b")
+    predicted_label, probabilities, labels = parse_prediction(query_response)
+    print("v")
+    final_result = predicted_label
+
+
+print(final_result)
+
+# final_result
+
+resultsFile = open("results.json", "w")
+resultsFile.write("{\"result\":" + "\"" + final_result + "\"" + "}")
