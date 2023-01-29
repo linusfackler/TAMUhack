@@ -4,6 +4,11 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+const axios = require("axios");
+const fs = require("fs");
+
+global.XMLHttpRequest = require("xhr2");
+
 require("dotenv").config();
 
 // var indexRouter = require("./routes/index");
@@ -23,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // app.use("/", indexRouter);
-app.use("/:filename", audioRouter);
+app.use("/", audioRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

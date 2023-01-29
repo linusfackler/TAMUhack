@@ -1,70 +1,69 @@
 var express = require("express");
 var router = express.Router();
 
-require("dotenv").config();
+var spawn = require("child_process").spawn;
 
-// var getVideo = require("../public/javascripts/firebase");
-
+const axios = require("axios");
+const fs = require("fs");
+// var download = require("downloadjs");
 const { initializeApp } = require("firebase/app");
 const { getStorage, ref, getDownloadURL } = require("firebase/storage");
 
-// TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
+  apiKey: "AIzaSyB3nPAemDSz-_b1GGXXzXCDg6GgdIhMITI",
+  authDomain: "tamuhack-1839f.firebaseapp.com",
+  projectId: "tamuhack-1839f",
+  storageBucket: "tamuhack-1839f.appspot.com",
+  messagingSenderId: "516649805203",
+  appId: "1:516649805203:web:e6f9a342eeaa94b1e2f466",
 };
 
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
-// void async function getVideo(refID) {
-//   let root = ref(storage);
-//   let videoRef = ref(root, refID);
+router.get("/:filename", function (req, res, next) {
+  let filename = req.params.filename;
 
-//   getDownloadURL(videoRef)
-//     .then((url) => {
-//       const xhr = new XMLHttpRequest();
-//       xhr.responseType = "blob";
-//       xhr.onload = (event) => {
-//         const file = xhr.response;
-//       };
-//       xhr.open("GET", url);
-//       xhr.send();
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
+  if (String(filename).includes(".pdf") === false) {
+    filename = filename + ".pdf";
+  }
 
-router.get("/", function (req, res, next) {
-  // res.send("Hello World!");
-  let refID = req.params.filename;
-
-  // console.log(app);
-
-  let videoRef = ref(storage, "/Resume_2022_Fall.pdf");
-  console.log(videoRef);
-
+  var videoRef = ref(storage, "/clips/" + filename);
   getDownloadURL(videoRef)
     .then((url) => {
-      const xhr = new XMLHttpRequest();
-      xhr.responseType = "blob";
-      xhr.onload = (event) => {
-        const file = xhr.response;
-      };
-      xhr.open("GET", url);
-      xhr.send();
+      axios({
+        method: "get",
+        url: url,
+        responseType: "stream",
+      })
+        .then((response) => {
+          response.data
+            .pipe(fs.createWriteStream("./public/videos/" + filename))
+            .on("close", () => {
+              console.log("File saved!");
+            });
+        })
+        .catch((error) => {
+          error;
+        });
     })
     .catch((error) => {
       console.log(error);
     });
 
-  // getVideo(filename);
-  // let filePath = `./public/videos/${filename}`;
+  var dataToSend;
+  // spawn new child process to call the python script
+  const python = spawn("python", ["script.py", "backend/videos/" +filename, "backend/pics/0.png"]);
+  // collect data from script
+  python.stdout.on("data", function (data) {
+    console.log("Pipe data from python script ...");
+    dataToSend = data.toString();
+    console.log(dataToSend);
+  });
+  // in close event we are sure that stream from child process is closed
+  python.on("close", (code) => {
+    console.log(`child process close all stdio with code ${code}`);
+  });
 });
 
 module.exports = router;
