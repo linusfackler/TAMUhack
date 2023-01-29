@@ -30,7 +30,7 @@ struct CoughTestView: View {
                     Spacer()
                     MicrophoneView(recording: $recording, audioRecorder: audioRecorder)
                 }
-            }.edgesIgnoringSafeArea(.all)
+            }.edgesIgnoringSafeArea(.bottom)
         }.navigationBarHidden(true)
     }
 }
@@ -49,7 +49,7 @@ struct MicrophoneView: View {
                 VStack(spacing: UIScreen.main.bounds.width*0.65) {
                     Text("Tap to start recording")
                         .font(Font.custom("Gilroy-Medium", size: Size.Font.Button.titleSize/1.5))
-                    NavigationLink(destination: VitalsPromptView(image: "VitalTest", titleText: "Vital Signs Test", subText: "Sit tight and breathe normally for 15 seconds.")) {
+                    NavigationLink(destination: BufferView(duration: 5, diagnosis: sendQuery())) {
                         ButtonView(type: .primaryStrong, text: "Submit")
                     }
                 }
@@ -66,7 +66,6 @@ struct MicrophoneView: View {
                                 audioRecorder.startRecording()
                             } else {
                                 audioRecorder.stopRecording()
-                                sendQuery()
                             }
                             withAnimation {
                                 recording.toggle()

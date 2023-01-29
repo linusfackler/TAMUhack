@@ -14,5 +14,8 @@ extension Color {
     struct UI {
         let primary = Color("Primary")
         let primaryWeak = Color("WeakPrimary")
+        
+        let positive = Color("PositiveColor")
+        let positiveDark = Color("PositiveColorDark")
     }
 }

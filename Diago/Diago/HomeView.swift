@@ -39,7 +39,7 @@ struct HomeView: View {
 //                }
 //            }
             
-            Spacer()
+            //Spacer()
             CoughPromptView(image: "VocalTest", titleText: "Respiratory Test", subText: "Record yourself coughing for a proper diagnosis.")
         }
     }

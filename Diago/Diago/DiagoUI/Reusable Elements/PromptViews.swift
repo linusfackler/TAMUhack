@@ -30,7 +30,7 @@ struct VitalsPromptView: View {
                 
                 VStack(spacing: Size.Spacing.Vertical.buttonSpace) {
                     NavigationLink {
-                        VitalsTestView()
+                        DiagnosisView(diagnosis: "pos")
                     } label: {
                         ButtonView(type: .primaryStrong, text: "Start")
                     }
@@ -80,5 +80,23 @@ struct CoughPromptView: View {
                 }
             }
         }.navigationBarHidden(true)
+    }
+}
+
+struct TitleTextsView: View {
+    @State var focusText: String
+    @State var trailText: String
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: Size.Spacing.Vertical.textSpace) {
+                Text(focusText)
+                    .font(Font.custom("Gilroy-Semibold", size: Size.Font.Button.titleSize))
+                    .foregroundColor(.white)
+                Text(trailText)
+                    .font(Font.custom("Gilroy-Semibold", size: Size.Font.Button.titleSize))
+                    .foregroundColor(.white.opacity(0.6))
+            }
+            Spacer()
+        }
     }
 }

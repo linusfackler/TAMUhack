@@ -25,13 +25,13 @@
 		902006402985A4CA0054D297 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020063F2985A4CA0054D297 /* Color.swift */; };
 		902006442985B33D0054D297 /* Gilroy-Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 902006432985B33D0054D297 /* Gilroy-Fonts */; };
 		902006462985BB110054D297 /* PromptViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006452985BB110054D297 /* PromptViews.swift */; };
-		902006482985C4790054D297 /* VitalsTestViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902006472985C4790054D297 /* VitalsTestViews.swift */; };
 		9020064D29860AAE0054D297 /* CoughTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020064C29860AAE0054D297 /* CoughTestView.swift */; };
 		9020065029861BC90054D297 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9020064F29861BC90054D297 /* DSWaveformImage */; };
 		9020065329861FBF0054D297 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020065229861FBF0054D297 /* AudioModel.swift */; };
 		90B36B0829866DA00049942E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 90B36B0729866DA00049942E /* FirebaseStorage */; };
 		90B36B0C2986A4020049942E /* DiagnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B36B0B2986A4020049942E /* DiagnosisView.swift */; };
 		90B36B0E2986A5D90049942E /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B36B0D2986A5D90049942E /* URLRequests.swift */; };
+		90B36B102986B5300049942E /* BufferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B36B0F2986B5300049942E /* BufferView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,11 +71,11 @@
 		902006412985ADB70054D297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		902006432985B33D0054D297 /* Gilroy-Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Gilroy-Fonts"; path = "../../../../../../Gilroy-Fonts"; sourceTree = "<group>"; };
 		902006452985BB110054D297 /* PromptViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptViews.swift; sourceTree = "<group>"; };
-		902006472985C4790054D297 /* VitalsTestViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalsTestViews.swift; sourceTree = "<group>"; };
 		9020064C29860AAE0054D297 /* CoughTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughTestView.swift; sourceTree = "<group>"; };
 		9020065229861FBF0054D297 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		90B36B0B2986A4020049942E /* DiagnosisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisView.swift; sourceTree = "<group>"; };
 		90B36B0D2986A5D90049942E /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
+		90B36B0F2986B5300049942E /* BufferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +186,9 @@
 			children = (
 				9020063129859A5E0054D297 /* ButtonViews.swift */,
 				902006452985BB110054D297 /* PromptViews.swift */,
-				902006472985C4790054D297 /* VitalsTestViews.swift */,
+				90B36B0B2986A4020049942E /* DiagnosisView.swift */,
 				9020065129861FA90054D297 /* CoughTest */,
+				90B36B0F2986B5300049942E /* BufferView.swift */,
 			);
 			path = "Reusable Elements";
 			sourceTree = "<group>";
@@ -222,7 +223,6 @@
 			children = (
 				9020064C29860AAE0054D297 /* CoughTestView.swift */,
 				9020065229861FBF0054D297 /* AudioModel.swift */,
-				90B36B0B2986A4020049942E /* DiagnosisView.swift */,
 			);
 			path = CoughTest;
 			sourceTree = "<group>";
@@ -377,12 +377,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B36B102986B5300049942E /* BufferView.swift in Sources */,
 				9020065329861FBF0054D297 /* AudioModel.swift in Sources */,
 				9020060829858E6E0054D297 /* Persistence.swift in Sources */,
 				9020064D29860AAE0054D297 /* CoughTestView.swift in Sources */,
 				90B36B0E2986A5D90049942E /* URLRequests.swift in Sources */,
 				9020060B29858E6E0054D297 /* Diago.xcdatamodeld in Sources */,
-				902006482985C4790054D297 /* VitalsTestViews.swift in Sources */,
 				902006402985A4CA0054D297 /* Color.swift in Sources */,
 				90B36B0C2986A4020049942E /* DiagnosisView.swift in Sources */,
 				9020063229859A5E0054D297 /* ButtonViews.swift in Sources */,
@@ -552,11 +552,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Diago/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To help diagnose your cough";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,11 +582,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Diago/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To help diagnose your cough";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
