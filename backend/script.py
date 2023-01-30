@@ -44,6 +44,8 @@ from pydub import AudioSegment
 
 
 url = sys.argv[1]
+output = sys.argv[2]
+print(url)
 wavePath = "./public/videos/output.wav"
 
 
@@ -73,17 +75,17 @@ def create_pngs_from_wavs(input_path, output_path):
 
 
 sound = AudioSegment.from_file(url,  format='m4a')
+print("high")
 sound.export(wavePath, format="wav")
 
-output = sys.argv[2]
 create_spectrogram(wavePath, output)
 print(output)
 
 
 def query_endpoint(img):
-    endpoint_name = 'jumpstart-ftc-tf-ic-resnet-50-classification-1-1'
-    client = boto3.client('runtime.sagemaker', region_name='us-east-2', aws_access_key_id="AKIAV4M7YLOKNNU3NKOT",
-                          aws_secret_access_key="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")
+    endpoint_name = 'jumpstart-ftc-tf-ic-resnet-50-classification-1'
+    client = boto3.client('runtime.sagemaker', region_name='us-east-1', aws_access_key_id="AKIAT7LO47EC2UQZW3UW",
+                          aws_secret_access_key="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")
     response = client.invoke_endpoint(
         EndpointName=endpoint_name, ContentType='application/x-image', Body=img, Accept='application/json;verbose')
     return response

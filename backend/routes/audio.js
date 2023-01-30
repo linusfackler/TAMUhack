@@ -8,7 +8,7 @@ const fs = require("fs");
 
 // var download = require("downloadjs");
 const { initializeApp } = require("firebase/app");
-const { getStorage, ref, getDownloadURL } = require("firebase/storage");
+const { getStorage, ref, getDownloadURL, put } = require("firebase/storage");
 const path = require("path");
 
 const firebaseConfig = {
@@ -49,23 +49,24 @@ router.get("/:filename", function (req, res, next) {
       console.log(error);
     });
 
-  var dataToSend;
-  // spawn new child process to call the python script
-  const python = spawn("python", ["script.py", "./public/videos/" +filename, "./public/pics/" + path.parse(filename).name]);
-  // collect data from script
-  python.stdout.on("data", function (data) {
-    console.log("Pipe data from python script ...");
-    dataToSend = data.toString();
-    console.log(dataToSend);
-  });
-  // in close event we are sure that stream from child process is closed
-  python.on("close", (code) => {
-    console.log(`child process close all stdio with code ${code}`);
+  	var dataToSend;
+ 
+	console.log(path.parse(filename).name);
+ 
+	const python = spawn("python3", ["script.py", "./public/videos/" +filename, "./public/pics/" + path.parse(filename).name]);
+  
+	python.stdout.on("data", function (data) {
+  	console.log("Pipe data from python script ...");
+  	dataToSend = data.toString();
+  	console.log(dataToSend);
+  	});
+ 	 python.on("close", (code) => {
+ 	 console.log(`child process close all stdio with code ${code}`);
+  	const result = require("../results.json");
+  	res.send(result);
+
   });
 
-  const result = require("../results.json");
-
-    res.send(result);
 });
 
 module.exports = router;
