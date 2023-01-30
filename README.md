@@ -60,4 +60,9 @@ doctors and hospitals and inform them with more knowledge about their symptoms. 
 self-isolating. The ease with which the tests are performed and how we measure metrics means that the app is well-placed in care settings. Its non-invasive and voluntary
 data collection means that it is able to build trust with the patient and as a result, be trusted by doctors. 
 
-<img src="https://imgur.com/a/1ijG7FT" />
+<img src="https://i.imgur.com/NBRWt0p.png" width="250"/>
+<p float="left">
+ <img src="https://i.imgur.com/dJgKDMn.jpg" width="250" hspace="20"/>
+ <img src="https://i.imgur.com/KgTQD2r.jpg" width="250" hspace="20"/>
+ <img src="https://i.imgur.com/VtutJkT.jpg" width="250" hspace="20"/>
+</p>
