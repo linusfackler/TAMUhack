@@ -1,4 +1,5 @@
 .plist
-
 node_modules
 .env
+backend/.env
+backend/.venv
